@@ -4,7 +4,7 @@ import streamlit as st
 
 # Display title and text
 st.title("Visualization of the Amsterdam Airbnb dataset relative to Centraal Station")
-st.markdown("Here we can see the dataframe created for this project. All prices are converted from USD to EUR.")
+st.markdown("Here we can see the dataframe created for this project. All prices have been converted from USD to EUR and adjusted for the 2022 annual inflation rate.")
 
 # Read dataframe
 dataframe = pd.read_csv(
