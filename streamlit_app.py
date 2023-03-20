@@ -3,8 +3,8 @@ import plotly.express as px
 import streamlit as st
 
 # Display title and text
-st.title("Week 1 - Data and visualization")
-st.markdown("Here we can see the dataframe created during this weeks project.")
+st.title("Visualization of the Amsterdam Airbnb dataset relative to Centraal Station")
+st.markdown("Here we can see the dataframe created for this project.")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -26,7 +26,7 @@ dataframe = dataframe[dataframe["Price"] <= 100]
 # Display as integer
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
 # Round of values
-dataframe["Price"] = "£ " + dataframe["Price"].round(2).astype(str) # <--- CHANGE THIS POUND SYMBOL IF YOU CHOSE CURRENCY OTHER THAN POUND
+dataframe["Price"] = "£ " + dataframe["Price"].round(2).astype(str)
 # Rename the number to a string
 dataframe["Location"] = dataframe["Location"].replace(
     {1.0: "To visit", 0.0: "Airbnb listing"}
